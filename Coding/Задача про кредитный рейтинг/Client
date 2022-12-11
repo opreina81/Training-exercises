@@ -1,0 +1,69 @@
+public class Client extends Person {
+    
+    String name;
+    int rating;
+    boolean isCredit;
+    boolean isInsurance;
+    int creditRate;
+    int insuranceRate;
+    private int rate;
+    
+    public Client(String name, int rating, boolean isCredit, boolean isInsurance) {
+        
+        super(name);
+        this.isCredit=isCredit;
+        this.isInsurance=isInsurance;
+        
+        if ((rating >= 500) && (rating <750)){
+            this.rating = 15;
+        }
+        else 
+        if ((rating >=750)){
+            this.rating = 14;
+        }
+        else {
+            System.out.printf("Client %s. The loan was refused. ", super.name);
+        }
+        
+        
+        if (isCredit==true){
+           this.creditRate=-1;
+        }
+        else {
+           this.creditRate=0;
+        }
+        
+        
+        if (isInsurance==true) {
+            this.insuranceRate=-2;
+        }
+        else {
+            this.insuranceRate=3;
+        }
+        
+        this.rate=generateRate();
+        
+    }
+    // UT = 1
+    private int generateRate() {
+        return this.rating + this.creditRate + this.insuranceRate;
+    }
+    
+     public int getRate() {
+        return this.rate;
+    }
+    
+    public int getGenerateRate() {
+        return this.generateRate();
+    }
+    
+    public void print() {
+        if (this.rate > 10) {
+        System.out.printf("The loan was approved to the client %s at a rate of %d percent.\n", super.name, this.rate);
+        }
+        else {
+            System.out.println("Contact another bank!");
+        }
+        
+    }
+}
