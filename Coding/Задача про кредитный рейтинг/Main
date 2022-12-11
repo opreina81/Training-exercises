@@ -1,0 +1,26 @@
+public class Main {
+
+    public static void main(String[] args) {
+        
+         Client c1 = new Client("Petrov", 400, true, true);
+        c1.print();
+        
+        Client c2 = new Client("Sidorov", 750, true, true);
+        c2.print();
+        
+         Client c3 = new Client("Ivanov", 501, true, true);
+        c3.print();
+        
+         Client c4 = new Client("Pushkin", 751, false, true);
+        c4.print();
+        
+         Client c5 = new Client("Kruglov", 749, false, true);
+        c5.print();
+        
+         Client c6 = new Client("Fet", 800, true, false);
+        c6.print();
+        
+         Client c7 = new Client("Bunin", 600, true, false);
+        c7.print();
+    }
+}
