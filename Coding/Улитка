@@ -1,0 +1,37 @@
+/*Посчитать кол-во дней, 
+за которые улитка выползет из колодца, 
+если за день она проползает n м., 
+а за ночь опускается на m м. 
+Глубина колодца, n,m задаются с клавиатуры*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+      
+      try {
+      Scanner sc=new Scanner(System.in);
+      int depth =sc.nextInt(); //глубина колодца
+      int count=0; //счетчик дней
+      int distance=0;//расстояние за день, метр
+      int day=sc.nextInt();// проползает в дневное время, метр
+      int nitgh=sc.nextInt();//опускается за ночь, метр
+  
+     if ((distance>depth)||(nitgh>day)||(nitgh>depth)) throw new Exception("Невалидные значения!");
+     
+      while (distance<=depth) {
+        distance=distance+day-nitgh;
+    
+        count++;
+      }
+    
+      System.out.println(count);
+sc.close();
+      }
+      catch (Exception ex) {
+        System.out.println(ex.getMessage());
+      }
+
+  }
+}
+
