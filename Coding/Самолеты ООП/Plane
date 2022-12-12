@@ -1,0 +1,20 @@
+public class Plane extends Avia {
+    
+    String food;
+    String model;
+    int seat;
+    
+    
+    public Plane(String company, String flight, String model, int seat, String food){
+        super(company, flight);
+        this.model=model;
+        this.seat=seat;
+        this.food=food;
+     
+    }
+    
+    public void saySlogan(){
+        System.out.println("Have a nice flight!");
+    }
+    
+}
