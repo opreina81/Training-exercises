@@ -1,0 +1,37 @@
+
+public class Main {
+
+    public static void main(String[] args) {
+       
+        Nutrients n1 = new Nutrients("Protein", 9.5);
+        Nutrients n2 = new Nutrients("Fat", 2.3);
+        Nutrients n3 = new Nutrients("Carb", 60.4);
+        
+        Macronutrient m1 = new Macronutrient("Buckwheat", "Protein", 9.5, 100);
+        Macronutrient m2 = new Macronutrient("Buckwheat", "Fat", 2.3, 100);
+        Macronutrient m3 = new Macronutrient("Buckwheat", "Carb", 60.4, 100);
+        Macronutrient m4 = new Macronutrient("Rice", "Protein", 7, 120);
+        Macronutrient m5 = new Macronutrient("Rice", "Fat", 1, 120);
+        Macronutrient m6 = new Macronutrient("Rice", "Carb", 74, 120);
+        
+        ForPerson fp1 = new ForPerson("Ivan", 25, "male", m1, m2, m3);
+        fp1.printPerson();
+        
+        ForPerson fp2 = new ForPerson("Olga", 41, "female", m4, m5, m6);
+        fp2.printPerson();
+        
+        //m1.printInfo();
+       //m2.printInfo();
+        //m3.printInfo();
+        //m4.printInfo();
+        
+        /*m4.setWeight(340);
+        System.out.println(m4.getFact());*/
+        
+        //Food f1= new Food(m1, m2, m3);
+        //f1.print();
+        
+        Food f2= new Food(m4, m5, m6);
+        f2.print();
+    }
+}
