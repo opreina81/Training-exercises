@@ -1,6 +1,4 @@
 /*расчет премии сотрудника*/
-
-
 import java.util.*;
 import java.util.Scanner;
 
@@ -8,29 +6,38 @@ public class Main {
     
     public static void salary (int a) {
       
-      if ((a>0)&&(a<40000)) {
+      if ((a>5000)&&(a<40000)) {
       double bonus= a*0.5;
       System.out.printf("Ваша премия %.2f рублей", bonus);
-      } else
+      } 
+      else
          if ((a>=40000)&&(a<80000)) {
         double bonus=a*0.7;
         System.out.printf("Ваша премия %.2f рублей", bonus);
-      } else
-          if (a>=80000) {
+         } 
+         else
+             if (a>=80000) {
             double bonus=a*1.1;
             System.out.printf("Ваша премия %.2f рублей", bonus);
-          } else 
-               System.out.println("Вы точно у нас работаете?");
-      
-      
-    }
+                }
+                else
+                if ((a<=500)&&(a>0)){
+                    System.out.println("Вы точно у нас работаете?");}
+        }
     
-     public static void main(String[] args) {
+     public static void main(String[] args) throws Exception {
+      
+      try {
+      
        Scanner sc=new Scanner(System.in);
        int a=sc.nextInt();
-     
        salary(a);
-sc.close();
-     
-     }
+       
+       if (a<=0) throw new Exception("Невалидные значения!");
+       sc.close();
+      }
+       catch (Exception ex) {
+       System.out.println(ex.getMessage());
+      }
+    }
 }
