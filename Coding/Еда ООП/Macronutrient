@@ -1,0 +1,32 @@
+public class Macronutrient extends Nutrients {
+    
+    String food_name;
+    double weight; // weight food
+    public double fact; //actual nutrient content in food
+    
+    public Macronutrient (String food_name, String nutrients_name, double in_hundreds, double weight){
+        super(nutrients_name, in_hundreds);
+        this.food_name=food_name;
+        this.weight=weight;
+        this.fact=generateFact();
+        
+    }
+    public double generateFact() {
+        return this.weight * this.in_hundreds / 100.0;
+    }
+    
+    public void printInfo(){
+        System.out.printf("The %s content in %s is %.2f grams\n", this.nutrients_name, this.food_name, this.fact);
+    }
+    
+    public double getFact() {
+        return this.fact;
+    }
+    
+    public void setWeight(double weight) {
+        this.weight = weight;
+        this.fact=generateFact();
+        System.out.printf("The %s content in %s has become %.2f grams\n", this.nutrients_name, this.food_name, this.fact);
+    }
+    
+}
