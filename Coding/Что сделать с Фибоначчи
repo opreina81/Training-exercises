@@ -9,43 +9,45 @@
 
 import java.util.Scanner;
 public class Main {
-   
-    
-    public static long fibonachi(int n){
+       
+    public static long fibonachi(int n) {
      
      if (n<=0)
-     return 0;
+         return 0;
      
      else if (n==1)
          return 1;
          
-      else
+     else
          return fibonachi(n-1)+fibonachi(n-2);
         
     }
     
      public static void main(String[] args) {
        
-       Scanner sc=new Scanner(System.in);
+      Scanner sc=new Scanner(System.in);
       
       int n=sc.nextInt();
       System.out.printf("%d член последовательности Фибоначчи: %d\n", n, fibonachi(n));
       
-      System.out.println("===============");
+      System.out.println("--------------");
       
       if (n <= 0) {
          System.out.printf("n = %d значение не допустимо %n", n);
-      } else if (n == 1) {
-         System.out.println("1");
-      } else  {
-        for (int i = 1; i < n; i++) {
+      } 
+         else if (n == 1) {
+          System.out.println("1");
+      } 
+         else  {
+           for (int i = 1; i < n; i++) {
           System.out.print(fibonachi(i) + ", "); }
-         System.out.println(fibonachi(n));
-        
-      }
+          System.out.println(fibonachi(n));
+              }
      
-      System.out.println("===============");
+      System.out.println("-----------------");
+      
       boolean result = ((fibonachi(n+2)-1)%2==0);
+      
       System.out.printf("Сумма первых %d членов последовательности Фибоначчи есть четное число? %b", n, result);
     
   }
