@@ -1,0 +1,13 @@
+
+public class Nutrients {
+    
+    String nutrients_name; //nutrients name
+    double in_hundreds; //weight per 100 grams of food
+    
+    
+    public Nutrients (String nutrients_name, double in_hundreds) {
+        this.nutrients_name = nutrients_name;
+        this.in_hundreds = in_hundreds;
+        
+    }
+}
