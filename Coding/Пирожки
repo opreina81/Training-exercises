@@ -4,18 +4,19 @@
 На выходе 2 числа: рубли и копейки.*/
 
 import java.util.Scanner;
-
 public class Main {
-    public static void main(String[] args) {
+
+public static void main(String[] args) {
       
-    Scanner sc=new Scanner(System.in);
+      Scanner sc=new Scanner(System.in);
     
         int a = sc.nextInt(); 
         int b = sc.nextInt(); 
         int n = sc.nextInt();
         int rub=(((a*100 + b )* n) / 100);
         int kop=((b * n) % 100);
-       System.out.printf("За %d пирожков надо заплатить: %d рублей, %d копеек.", n, rub, kop);
+     
+     System.out.printf("За %d пирожков надо заплатить: %d рублей, %d копеек.", n, rub, kop);
     
 sc.close();
     
