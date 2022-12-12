@@ -1,0 +1,142 @@
+public class ForPerson extends Food{
+    
+    public String name;
+    public int age;
+    public String sex;
+    double countProtein=0; //variable for calculating the daily allowance
+    double countFat=0;
+    double countCarb=0;
+    int countEating=0; //variable for counting meals
+  
+    public ForPerson(String name, int age, String sex, Macronutrient p, Macronutrient f, Macronutrient c) {
+        super(p, f, c);
+        this.name = name;
+        
+        if(age <= 0) {
+            this.age = 18;
+        }
+        else {
+            this.age = age;
+        }
+        
+        if((sex == "male") || (sex == "female")) {
+            this.sex = sex;
+            
+            if (sex == "male"){
+                if ((age>18) && (age<=29)){
+                while (countProtein<=96){
+                    countProtein=countProtein+p.fact;
+                   countEating++;}                                                             
+                 System.out.printf("To cover the daily need for nutrients, you need to eat %d servings of %s of %.2f grams: %s = %.2f", countEating, this.p.food_name, this.p.weight, this.p.nutrients_name, countProtein /*, this.f.nutrients_name, countFat, this.c.nutrients_name, countCarb*/);
+                 while (countFat<=53) {
+                   
+                    countFat=countFat+f.fact;
+                   }
+                 System.out.printf(" %s = %.2f grams, ", this.f.nutrients_name, countFat);
+                while  (countCarb<=117){
+                    countCarb=countCarb+c.fact;}
+                   System.out.printf(" %s = %.2f grams\n", this.c.nutrients_name, countCarb);
+                
+                    
+                }
+                if ((age>30)&&(age<=39)){
+               while (countProtein<=93){
+                    countProtein=countProtein+p.fact;
+                   countEating++;}                                                             
+                 System.out.printf("To cover the daily need for nutrients, you need to eat %d servings of %s of %.2f grams: %s = %.2f", countEating, this.p.food_name, this.p.weight, this.p.nutrients_name, countProtein /*, this.f.nutrients_name, countFat, this.c.nutrients_name, countCarb*/);
+                 while (countFat<=51) {
+                   
+                    countFat=countFat+f.fact;
+                   }
+                 System.out.printf(" %s = %.2f grams, ", this.f.nutrients_name, countFat);
+                while  (countCarb<=114){
+                    countCarb=countCarb+c.fact;}
+                   System.out.printf(" %s = %.2f grams\n", this.c.nutrients_name, countCarb);
+                
+                    
+                }
+                if (age>40){
+                while (countProtein<=88){
+                    countProtein=countProtein+p.fact;
+                   countEating++;}                                                             
+                 System.out.printf("To cover the daily need for nutrients, you need to eat %d servings of %s of %.2f grams: %s = %.2f", countEating, this.p.food_name, this.p.weight, this.p.nutrients_name, countProtein /*, this.f.nutrients_name, countFat, this.c.nutrients_name, countCarb*/);
+                 while (countFat<=48) {
+                   
+                    countFat=countFat+f.fact;
+                   }
+                 System.out.printf(" %s = %.2f grams, ", this.f.nutrients_name, countFat);
+                while  (countCarb<=108){
+                    countCarb=countCarb+c.fact;}
+                   System.out.printf(" %s = %.2f grams\n", this.c.nutrients_name, countCarb);
+                
+                    
+                }
+            }
+            
+                
+        }
+         
+            if (sex == "female"){
+                if ((age>18) && (age<=29)){
+                while (countProtein<81){
+                    countProtein=countProtein+p.fact;
+                   countEating++;}                                                             
+                 System.out.printf("To cover the daily need for nutrients, you need to eat %d servings of %s of %.2f grams: %s = %.2f", countEating, this.p.food_name, this.p.weight, this.p.nutrients_name, countProtein /*, this.f.nutrients_name, countFat, this.c.nutrients_name, countCarb*/);
+                 while (countFat<45) {
+                   
+                    countFat=countFat+f.fact;
+                   }
+                 System.out.printf(" %s = %.2f grams, ", this.f.nutrients_name, countFat);
+                while  (countCarb<99){
+                    countCarb=countCarb+c.fact;}
+                   System.out.printf(" %s = %.2f grams\n", this.c.nutrients_name, countCarb);
+                
+                    
+                }
+                if ((age>30)&&(age<=39)){
+               while (countProtein<78){
+                    countProtein=countProtein+p.fact;
+                   countEating++;}                                                             
+                 System.out.printf("To cover the daily need for nutrients, you need to eat %d servings of %s of %.2f grams: %s = %.2f", countEating, this.p.food_name, this.p.weight, this.p.nutrients_name, countProtein /*, this.f.nutrients_name, countFat, this.c.nutrients_name, countCarb*/);
+                 while (countFat<43) {
+                   
+                    countFat=countFat+f.fact;
+                   }
+                 System.out.printf(" %s = %.2f grams, ", this.f.nutrients_name, countFat);
+                while  (countCarb<95){
+                    countCarb=countCarb+c.fact;}
+                   System.out.printf(" %s = %.2f grams\n", this.c.nutrients_name, countCarb);
+                
+                    
+                }
+                if (age>40){
+                while (countProtein<75){
+                    countProtein=countProtein+p.fact;
+                   countEating++;}                                                             
+                 System.out.printf("To cover the daily need for nutrients, you need to eat %d servings of %s of %.2f grams: %s = %.2f", countEating, this.p.food_name, this.p.weight, this.p.nutrients_name, countProtein /*, this.f.nutrients_name, countFat, this.c.nutrients_name, countCarb*/);
+                 while (countFat<41) {
+                   
+                    countFat=countFat+f.fact;
+                   }
+                 System.out.printf(" %s = %.2f grams, ", this.f.nutrients_name, countFat);
+                while  (countCarb<92){
+                    countCarb=countCarb+c.fact;}
+                   System.out.printf(" %s = %.2f grams\n", this.c.nutrients_name, countCarb);
+                
+                    
+                }
+            }
+            
+                
+        
+        else {
+            this.sex = null;
+        }
+        
+    }
+    
+    public void printPerson() {
+        System.out.printf("Name = %s, age = %d, sex = %s \n", this.name, this.age, this.sex);
+        System.out.println();
+    }
+}
