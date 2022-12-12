@@ -1,0 +1,30 @@
+public class Leasing extends Transport {
+   
+    String lessor; //name lessor
+    Avia avia;
+    int number; //quantity of aircraft in the company's portfolio, pieces
+    int sum; // total aircraft portfolio, billions of rubles
+    
+    public Leasing (){};
+    
+    public Leasing(String lessor, int number, int sum){
+        this.lessor=lessor;
+        this.number=number;
+        this.sum=sum;
+    }
+    
+    public void saySlogan(){
+        System.out.println("Individual approach to each client!");
+    }
+    
+   /* public void printInfo() {
+        System.out.printf("Lessor = %s, sum = %d, number = %d \n", this.lessor, this.sum, this.number);
+    } */
+    
+    public void setAvia(Avia avia){
+        this.avia=avia;
+        avia.lessee=this; //transfer to the lessee
+        System.out.printf("The %s has leased aircraft from the %s\n", avia.company, this.lessor);
+        
+    }
+}
